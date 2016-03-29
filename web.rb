@@ -3,6 +3,10 @@ require 'net/http'
 require 'uri'
 require 'json'
 
+get '/' do
+	"ready"
+end
+
 post '/:formKey' do
 	formKey = params['formKey']
 	res = Net::HTTP.post_form(URI.parse("https://docs.google.com/forms/d/" + formKey + "/formResponse"), params)
