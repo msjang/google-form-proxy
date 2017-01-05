@@ -9,7 +9,7 @@ end
 
 post '/:formKey' do
 	formKey = params['formKey']
-	res = Net::HTTP.post_form(URI.parse("https://docs.google.com/forms/d/" + formKey + "/formResponse"), params)
+	res = Net::HTTP.post_form(URI.parse("https://docs.google.com/forms/d/e/" + formKey + "/formResponse"), params)
 	headers \
 		"Access-Control-Allow-Origin" => "*",
 		"Content-Type"                => "application/json"
